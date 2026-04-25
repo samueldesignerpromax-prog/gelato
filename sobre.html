@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Gelato Dreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo" onclick="location.href='index.html'">🍨 Gelato Dreams</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sabores.html">Sabores 70+</a></li>
+        <li><a href="combos.html">Combos</a></li>
+        <li><a href="sobre.html" class="active">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="pedido.html">Pedido</a></li>
+    </ul>
+    <div class="nav-icons">
+        <div class="cart-icon-btn" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">0</span>
+        </div>
+        <button class="theme-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
+    </div>
+</nav>
+
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h3><i class="fas fa-ice-cream"></i> Meu Carrinho</h3>
+        <button onclick="toggleCart()" class="close-cart">✕</button>
+    </div>
+    <div id="cartItemsList"></div>
+    <div class="cart-total">Total: R$ <span id="cartTotal">0.00</span></div>
+    <button onclick="finalizeOrder()" class="btn-finalizar">Finalizar Pedido 🎉</button>
+    <p id="orderMessage" class="order-msg"></p>
+</div>
+
+<main>
+    <div class="container">
+        <div class="about-container">
+            <div class="about-card">
+                <h1><i class="fas fa-heart" style="color:#FF6B6B;"></i> Nossa História</h1>
+                <p>Fundada em 2020 em plena pandemia, a <strong>Gelato Dreams</strong> nasceu do sonho de levar alegria e aconchego através de sorvetes artesanais coloridos e cheios de personalidade. Começamos pequenos, com apenas 15 sabores, e hoje somos referência em sorvetes premium na região.</p>
+                
+                <h2><i class="fas fa-bullseye"></i> Missão</h2>
+                <p>Oferecer a melhor experiência em sorvetes, com ingredientes naturais, sabores criativos e atendimento acolhedor, fazendo cada cliente se sentir especial.</p>
+                
+                <h2><i class="fas fa-gem"></i> Valores</h2>
+                <ul>
+                    <li>✨ Qualidade impecável em cada produção</li>
+                    <li>🌱 Sustentabilidade e respeito ao meio ambiente</li>
+                    <li>🎨 Inovação constante em sabores e combinações</li>
+                    <li>💖 Paixão pelo que fazemos</li>
+                </ul>
+                
+                <h2><i class="fas fa-trophy"></i> Diferenciais</h2>
+                <div class="diferenciais-grid">
+                    <div class="diferencial">🌱 Ingredientes 100% naturais</div>
+                    <div class="diferencial">🍦 Mais de 70 sabores sempre disponíveis</div>
+                    <div class="diferencial">🌈 Opções veganas e sem lactose</div>
+                    <div class="diferencial">🏆 Prêmio Melhor Sorveteria Artesanal 2023</div>
+                    <div class="diferencial">🚀 Delivery próprio e rápido</div>
+                    <div class="diferencial">🎉 Festas e eventos personalizados</div>
+                </div>
+                
+                <div class="missao-visao">
+                    <div class="missao">
+                        <i class="fas fa-eye"></i>
+                        <h3>Visão</h3>
+                        <p>Ser a sorveteria mais amada do Brasil, reconhecida pela criatividade e qualidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>🍦 Gelato Dreams - Feito com amor desde 2020 💖</p>
+    <p>© 2024 - Uma história doce para compartilhar</p>
+</footer>
+
+<script src="carrinho.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
